@@ -13,3 +13,4 @@ notifications:
       - mm8348@nyu.edu
       - pl1582@nyu.edu
     on_success: always  
+    on_failure: never

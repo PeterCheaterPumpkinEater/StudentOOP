@@ -10,8 +10,6 @@ struct GPS {
         longitude(lo) {}
 };
 
-std::ostream& operator<<(std::ostream& os, const GPS& gps);
-
 const int UNRATED = -1;
 const int BAD = 0;
 const int OK = 1;

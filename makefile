@@ -16,7 +16,7 @@ test_pointers: $(TEST_DIR)/test_pointers
 
 $(TEST_DIR)/test_pointers: $(STUDENT_DIR)/pointers.cpp $(TEST_DIR)/test_pointers.cpp
 
-tests: test_hello test_basics test_pointers
+tests: test_hello test_basics test_pointers test_weather
 	tests/test_hello
 	tests/test_basics
 	tests/test_pointers

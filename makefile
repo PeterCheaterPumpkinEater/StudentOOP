@@ -20,6 +20,7 @@ tests: test_hello test_basics test_pointers
 	tests/test_hello
 	tests/test_basics
 	tests/test_pointers
+	tests/test_weather
 
 prod: tests
 	- git commit -a -m "testing new code"

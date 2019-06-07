@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include "../my_code/weather.h"
+#include "../my_code/date.h"
 
 using namespace std;
 
@@ -27,6 +28,14 @@ int main() {
     string filenm;
     cout << "Input the name of the new readings file:\n";
     cin >> filenm;
+    
+    ifstream rfile(filenm);
+    
+    while (!rfile){
+        cout << "Input the name of the new readings file:\n";
+        cin >> filenm;
+        rfile.open(filenm);
+    }
     
     get_wreadings(filenm, irkutsk);
     

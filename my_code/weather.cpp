@@ -74,6 +74,14 @@ string Image::display(std::string s) {
 /*
  * A constructor for weather class.
  * */
+
+Date::Date(int d, int m, int y) : day(d), month(m), year(y) {};
+
+ostream& operator<<(ostream& os, const Date& date){
+    os << "Day: " << date.day << " Month: " << date.month << " Year: " << date.year;
+    return os;
+}
+
 Weather::Weather(std::string nm, GPS loc) :
     station_nm(nm), my_loc(loc) {}
 

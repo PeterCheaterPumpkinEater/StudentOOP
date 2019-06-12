@@ -20,12 +20,18 @@ test_weather: $(TEST_DIR)/test_weather
 
 $(TEST_DIR)/test_weather: $(STUDENT_DIR)/weather.cpp $(TEST_DIR)/test_weather.cpp
 
-tests: test_hello test_basics test_pointers test_weather
+test_complex: $(TEST_DIR)/test_complex
+
+$(TEST_DIR)/test_complex: $(STUDENT_DIR)/complex.cpp $(TEST_DIR)/test_complex.cpp
+
+
+tests: test_hello test_basics test_pointers test_complex
 	tests/test_hello
 	tests/test_basics
 	tests/test_pointers
 	tests/test_weather
+	tests/test_complex
 
 prod: tests
-	- git commit -a -m "testing new code"
+	- git commit -a -m "new assignment done"
 	git push origin master

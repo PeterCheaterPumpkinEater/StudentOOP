@@ -3,7 +3,6 @@
 
 #include <string>
 #include <vector>
-#include "date.h"
 
 /*
  * This will be the base class for all types of images.
@@ -40,6 +39,17 @@ private:
 };
 
 //--------------------------------------------------------
+
+class Date {
+    friend std::ostream& operator<<(std::ostream& os, const Date& date);
+public:
+    Date(int d, int m, int y);
+private:
+    int day;
+    int month;
+    int year;
+};
+
 struct GPS {
     double latitude;
     double longitude;

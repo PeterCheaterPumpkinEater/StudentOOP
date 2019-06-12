@@ -4,7 +4,7 @@
 class Date {
     friend std::ostream& operator<<(std::ostream& os, const Date& date);
 public:
-    Date(int d, int m, int y) : day(d), month(m), year(y) {};
+    Date(int d, int m, int y);
 private:
     int day;
     int month;

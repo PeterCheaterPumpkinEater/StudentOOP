@@ -5,7 +5,7 @@
 using namespace std;
 
 
-const bool ASDFADS = true;
+const bool DEBUG = true;
 
 
 int main() {

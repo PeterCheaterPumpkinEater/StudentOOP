@@ -61,15 +61,40 @@ void Image::copy_fields(const Image& img2) {
     filename = img2.filename;
 }
 
+void Image::display() {
+    cout << "Displaying Image" << endl;
+}
+
+void Gif::display() {
+    cout << "Displaying Gif" << endl;
+}
+
+void Png::display() {
+    cout << "Displaying Png" << endl;
+}
+
+void Jpeg::display() {
+    cout << "Displaying Jpeg" << endl;
+}
+
+void WReading::display_image() {
+    images -> display();
+}
+void Weather::display_images() {
+    for (WReading i: wreadings) {
+        i.display_image();
+    }
+}
 //--------------------------------------------------------
 
 /*
  * Setting `display() = 0` here makes this an abstract
  * class that can't be implemented.
  * */
-string Image::display(std::string s) {
-    return "Displaying image " + s;
-}
+                      
+//string Image::display(string s) {
+//    return "Displaying image " + s;
+//}
 
 /*
  * A constructor for weather class.

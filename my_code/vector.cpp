@@ -23,11 +23,11 @@ MyVec::MyVec() {
     capacity = DEF_CAPACITY;
 }
 
-MyVec::MyVec(int sz, int val) {
-    data = new int[sz*2];
-    for (int i = 0; i < sz; i++) {data[i] = val;}
-    sz = sz;
-    capacity = sz*2;
+MyVec::MyVec(int size, int val) {
+    data = new int[size*2];
+    for (int i = 0; i < size; i++) {data[i] = val;}
+    sz = size;
+    capacity = size*2;
 }
 
 MyVec::MyVec(const MyVec& v2) {

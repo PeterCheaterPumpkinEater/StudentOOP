@@ -25,12 +25,21 @@ int main() {
         v3.push_back(i);
     }
     assert(v3[1] == 18);
-
+    
     MyVec v2 = v;
     print_vector(v2);
     assert(v2 == v);
-
+    
     v2 = v3;
     print_vector(v2);
     assert(v2 == v3);
+    
+    for (int i : v3) {
+        assert((i % 9) == 0);
+    }
+    
+    MyVec v4 = MyVec(10, 20);
+    for (int i : v4) {
+        assert(i == 20);
+    }
 }

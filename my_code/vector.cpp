@@ -24,26 +24,28 @@ MyVec::MyVec() {
 }
 
 MyVec::MyVec(int sz, int val) {
-    data = new int[sz];
+    data = new int[sz*2];
     for (int i = 0; i < sz; i++) {data[i] = val;}
     sz = sz;
-    capacity = DEF_CAPACITY;
+    capacity = sz*2;
 }
 
 MyVec::MyVec(const MyVec& v2) {
     capacity = v2.capacity;
     sz = v2.sz;
-    data = v2.data;
-    
+    data = new int[v2.capacity];
+    for (int i = 0; i < sz; i++) {data[i] = v2.data[i];}
 }
 
 MyVec::~MyVec() {
+    delete [] data;
 }
 
 MyVec& MyVec::operator=(const MyVec& v2) {
     capacity = v2.capacity;
     sz = v2.sz;
-    data = v2.data;
+    data = new int[v2.capacity];
+    for (int i = 0; i < sz; i++) {data[i] = v2.data[i];}
     return *this;
 }
 

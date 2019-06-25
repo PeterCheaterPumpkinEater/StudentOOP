@@ -8,9 +8,25 @@ void print_vector(const MyVec& v) {
     cout << endl;
 }
 
+MyVec::Iterator MyVec::begin() const {
+    return MyVec::Iterator(data);
+}
+
+MyVec::Iterator MyVec::end() const {
+    return MyVec::Iterator(data + sz);
+}
+
+
 MyVec::MyVec() {
     data = new int[DEF_CAPACITY];
     sz = 0;
+    capacity = DEF_CAPACITY;
+}
+
+MyVec::MyVec(int sz, int val) {
+    data = new int[sz];
+    for (int i = 0; i < sz; i++) {data[i] = val;}
+    sz = sz;
     capacity = DEF_CAPACITY;
 }
 

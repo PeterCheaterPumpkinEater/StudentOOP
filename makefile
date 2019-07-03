@@ -32,6 +32,8 @@ test_tvector: $(TEST_DIR)/test_tvector
 
 $(TEST_DIR)/test_tvector: $(TEST_DIR)/test_tvector.cpp
 
+test_functors: $(TEST_DIR)/test_functors
+
 $(TEST_DIR)/test_functors: $(TEST_DIR)/test_functors.cpp
 
 tests: test_hello test_basics test_pointers test_weather test_vector test_llist test_tvector test_functors
